@@ -1,33 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { AirBnBCard } from './components/AirBnBCard/AirBnbCard'
+import GuestListCard from './components/GuestListCard/GuestListCard'
+import ScheduleCard from './components/ScheduleCard/ScheduleCard'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
+      <header>
+        <h1>Sri's 25th Birthday</h1>
+      </header>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <h3>Hey y'all, welcome to my 25th birthday celebration website (time to finally put the skills I use at work to play)</h3>
+        <h4>All you may know (maybe not if you're Isha), my birthday is coming up on the 11th of January. I've planned a weekend away, with my nearest and dearest, at an Airbnb in Bournemouth for the weekend of 10th - 12th January</h4>
+
+        <div className='card-container'>
+          <ScheduleCard />
+          <AirBnBCard />
+          <GuestListCard />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
