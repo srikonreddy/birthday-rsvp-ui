@@ -1,45 +1,33 @@
 import React, { useState } from 'react';
 import './Login.css';
 
-
-const allowedUsers = [
-  { firstName: 'Sri', lastName: 'Konreddy' },
-  { firstName: 'Ramnik', lastName: 'Jhooti' },
-  { firstName: 'Niha', lastName: 'Gummakonda' },
-  { firstName: 'Yuktha', lastName: 'Gubbala' },
-  { firstName: 'Stacey', lastName: 'Pavdeja' },
-  { firstName: 'Lexi', lastName: 'Cooper-Dervan' },
-  { firstName: 'Aonghus', lastName: 'Mullen' },
-  { firstName: 'Pauline', lastName: 'Renevey' },
-  { firstName: 'Molly', lastName: 'Harris' },
-  { firstName: 'Isha', lastName: 'Pachnanda' },
-  { firstName: 'Charlotte', lastName: 'Harwood' }
-];
-
 const Login = ({ onLogin }) => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [error, setError] = useState('');
 
-  const handleLogin = () => {
-  
-      const user = allowedUsers.find(
-        user =>
-          user.firstName.toLowerCase() === firstName.toLowerCase() &&
-          user.lastName.toLowerCase() === lastName.toLowerCase()
-      );
-  
-      if (user) {
-        onLogin();
+  const handleLogin = async () => {
+    try {
+      const response = await fetch('https://birthday-rsvp-backend.onrender.com/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ firstName, lastName }),
+      });
+
+      if (response.ok) {
+        onLogin(); 
       } else {
-        setError('Invalid first name or last name, please check spacing :)');
+        const errorData = await response.json();
+        setError(errorData.message);
       }
-    };
-  
+    } catch (error) {
+      setError('An error occurred. Please try again.');
+    }
+  };
 
   return (
     <div className="login-container">
-      <h2>Login</h2>
+      <h2>Welcome!</h2>
       <input
         type="text"
         placeholder="First Name"
