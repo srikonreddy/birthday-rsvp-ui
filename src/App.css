@@ -1,35 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffe6f2; /* Light pink background */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ffcee6; /* Pink header background */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 10px 0;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-
 }
-
-body {
-  background-color: #ffe6f2;
-}
-
-
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
 
 .card-container {
   display: flex;
   justify-content: space-around;
   align-items: stretch; /* Ensure the cards stretch to the same height */
-  gap: 10px; /* Optional: Adds space between the cards */
-  margin-top: 20px; /* Optional: Adds space above the cards */
+  gap: 10px; /* Adds space between the cards */
+  margin-top: 20px; /* Adds space above the cards */
+  flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
 }
 
 .card-container > * {
-  flex: 1; /* Optional: Makes the cards take equal space */
-  max-width: 45%; /* Optional: Limits the maximum width of each card */
+  flex: 1; /* Makes the cards take equal space */
+  max-width: 45%; /* Limits the maximum width of each card */
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    align-items: center; /* Center align the cards */
+  }
+
+  .card-container > * {
+    max-width: 100%; /* Allow cards to take full width on smaller screens */
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  h4 {
+    font-size: 1em;
+  }
 }
