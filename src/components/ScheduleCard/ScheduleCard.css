@@ -31,6 +31,26 @@
   margin: 5px 0;
 }
 
+.schedule-address {
+  font-size: 0.9em; /* Smaller text */
+  color: #555; /* Slightly darker text */
+}
+
+.schedule-address a {
+  color: #ff66b2; /* Pink link */
+  text-decoration: none;
+}
+
+.schedule-address a:hover {
+  text-decoration: underline;
+}
+
+.schedule-note {
+  font-size: 0.8em; /* Even smaller text */
+  color: #777; /* Slightly darker text */
+  margin-top: 5px;
+}
+
 .schedule-image {
   width: 100%;
   height: auto;

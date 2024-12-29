@@ -2,7 +2,7 @@
   max-width: 400px;
   margin: 20px auto;
   padding: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid #ff99cc; /* Pink border */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #fff;
@@ -15,6 +15,8 @@
 .guestlist-card h2 {
   text-align: center;
   margin-bottom: 20px;
+  color: #ff66b2; /* Pink text */
+
 }
 
 .guestlist-card ol {
@@ -23,4 +25,10 @@
 
 .guestlist-card li {
   margin-bottom: 10px;
+}
+
+.guestlist-image {
+  width: 50%;
+  height: 30%;
+  align-self: center;
 }

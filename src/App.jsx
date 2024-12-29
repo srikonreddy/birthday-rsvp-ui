@@ -11,11 +11,11 @@ function App() {
       </header>
       <div>
         <h3>Hey y'all, welcome to my 25th birthday celebration website (time to finally put the skills I use at work to play)</h3>
-        <h4>All you may know (maybe not if you're Isha), my birthday is coming up on the 11th of January. I've planned a weekend away, with my nearest and dearest, at an Airbnb in Bournemouth for the weekend of 10th - 12th January</h4>
+        <h4>As you may know (maybe not if you're Isha), my birthday is coming up on the 11th of January. I've planned a weekend away, with my nearest and dearest, at an Airbnb in Bournemouth for the weekend of 10th - 12th January</h4>
 
         <div className='card-container'>
+        <AirBnBCard />
           <ScheduleCard />
-          <AirBnBCard />
           <GuestListCard />
         </div>
       </div>

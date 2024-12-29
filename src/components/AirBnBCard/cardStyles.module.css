@@ -2,14 +2,20 @@
   max-width: 400px;
   margin: 20px auto;
   padding: 20px;
-  border: 1px solid #ddd;
+  border: 1px solid #ff99cc; /* Pink border */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 300px; /* Set a minimum height */
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff66b2; /* Pink text */
+
 }
 
 .image {
@@ -23,7 +29,8 @@
 
 .footer {
   padding: 16px;
-  background-color: #f1f1f1;
+  background-color: #ffe6f2;
   text-align: center;
   cursor: pointer;
+  color: #ff66b2; 
 }
