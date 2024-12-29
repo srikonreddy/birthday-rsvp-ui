@@ -23,7 +23,8 @@ const ScheduleCard = () => {
         />
       </div>
       <div className="schedule-item">
-        <h3>Saturday Night (11th)</h3>
+        <h3>Saturday (11th)</h3>
+        <p><strong>12:00 PM</strong> - Brunch @ (ask Niha)</p>
         <p><strong>6:00 PM</strong> - My family arrives at the Airbnb</p>
         <p><strong>7:00 PM</strong> - Birthday dinner at the Airbnb</p>
       </div>
