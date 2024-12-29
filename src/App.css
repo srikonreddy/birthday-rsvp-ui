@@ -1,4 +1,5 @@
 body {
+  font-family: Arial, sans-serif;
   background-color: #ffe6f2; /* Light pink background */
   color: #333;
   margin: 0;
@@ -6,14 +7,31 @@ body {
 }
 
 header {
-  background-color: #ffcee6; /* Pink header background */
+  background-color: #ff66b2; /* Pink header background */
   color: white;
+  padding: 20px;
   text-align: center;
 }
 
 h1, h2, h3, h4 {
   margin: 0;
   padding: 10px 0;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.2em;
 }
 
 #root {
@@ -23,12 +41,12 @@ h1, h2, h3, h4 {
   text-align: center;
 }
 
-
 .card-container {
   display: flex;
   justify-content: space-around;
   align-items: stretch; /* Ensure the cards stretch to the same height */
   gap: 10px; /* Adds space between the cards */
+  margin-top: 20px; /* Adds space above the cards */
   flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
 }
 
@@ -37,9 +55,6 @@ h1, h2, h3, h4 {
   max-width: 45%; /* Limits the maximum width of each card */
 }
 
-
-
-/* phone css*/
 @media (max-width: 768px) {
   .card-container {
     flex-direction: column; /* Stack cards vertically on smaller screens */
